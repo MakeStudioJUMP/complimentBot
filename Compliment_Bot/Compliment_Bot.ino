@@ -72,13 +72,12 @@ void loop() {
   Serial.println(loopCounter); // debug value
   loopCounter = loopCounter + 1;
 
-  randNumber = random(1,10); //set randNumber to be a random number between min-max (min, max)
+  randNumber = random(2,10); //set randNumber to be a random number between min-max (min, max) start at 2 because file 1 is boot mp3 file
   Serial.print("randNumber is: ");
   Serial.println(randNumber); // debug value
  
   val = analogRead(analogPin);
-
-  if(isValueClean() == true) { //microwave sensor is giving values 668-670 for active relay
+  if(isValueClean() == true) { 
 
     player.play(randNumber); //Play track using randNumber track #
     Serial.print("track ");
