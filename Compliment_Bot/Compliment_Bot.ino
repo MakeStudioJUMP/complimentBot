@@ -79,6 +79,7 @@ void loop() {
   val = analogRead(analogPin);
   if(isValueClean() == true) { 
 
+    player.play(1); //Play Boot track
     player.play(randNumber); //Play track using randNumber track #
     Serial.print("track ");
     Serial.print(randNumber);
